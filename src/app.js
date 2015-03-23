@@ -2,8 +2,7 @@ var UI = require('ui');
 var ajax = require('ajax');
 var long, lat;
 
-function weather(){
-  console.log("Inside Weather");
+function weatherUpdate(){
   var locationOptions = {
   enableHighAccuracy: true, 
   maximumAge: 10000, 
@@ -14,6 +13,7 @@ function weather(){
   var URL =  "api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long;
   ajax({url: URL, type: 'json'},
   function(json) {
+  console.log("Inside Weather!!!");
    var temp = Math.round(json.main.temp - 273.15);
 
   // Use data to show a weather forecast Card
@@ -99,7 +99,7 @@ appMenu.on('select', function(event) {
       console.log(event.itemIndex);
       switch(event.itemIndex){
         case 0:
-          weather();
+          weatherUpdate();
           /*console.log("Case 0");
             detailCard = new UI.Card({
              title: phrases[0].title

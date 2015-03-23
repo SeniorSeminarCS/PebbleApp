@@ -100,35 +100,43 @@ appMenu.on('select', function(event) {
       var detailCard;
       console.log(event.itemIndex);
       switch(event.itemIndex){
+          
         case 0:
           updateWeather();
-          //console.log(getWeather);
-          //console.log(getWeather.getLocation());
-          //getWeather.getLocation();
-          /*console.log("Case 0");
-            detailCard = new UI.Card({
-             title: phrases[0].title
-          });*/
+          console.log("Case 0 - Weather");
+          detailCard = new UI.Card({
+            title: "Weather"
+          });
           break;
+          
         case 1:
-           /*console.log("Case 1");
-            detailCard = new UI.Card({
-            title: phrases[1].title
-          });*/
+           console.log("Case 1 - Curency");
+           detailCard = new UI.Card({
+            title: "Currency"
+          });
           break;
+          
         case 2:
-           /*console.log("Case 2");
+           console.log("Case 2 - Measurement");
             detailCard = new UI.Card({
-            title: phrases[2].title
-            });*/
+            title: "Measurement"
+            });
           break;
+          
         case 3:
-          /* console.log("Case 3");
-            detailCard = new UI.Card({title: phrases[3].title});*/
+         console.log("Case 3 - Phrasebook");
+          detailCard = new UI.Menu({
+             sections: [{
+              title: 'Phrasebook',
+              items: phrases
+            }]
+          });
           break;
+          
         default:
           console.log("Default Case");
           detailCard = new UI.Card({title: phrases[3].title});
+          break;
       }
       // Show a card with clicked item details
    /*   detailCard = new UI.Card({

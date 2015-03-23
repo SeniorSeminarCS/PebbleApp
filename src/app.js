@@ -50,10 +50,30 @@ var phrases = [
 ];
 // Add a click listener for select button click
 appMenu.on('select', function(event) {
+      var detailCard;
+      console.log(event.itemIndex);
+      switch(event.itemIndex){
+        case 0:
+            detailCard = new UI.Card({
+             title: phrases[0].title
+          });
+        case 1:
+            detailCard = new UI.Card({
+            title: phrases[1].title
+          });
+        case 2:
+            detailCard = new UI.Card({
+            title: phrases[2].title
+            });
+        case 3:
+            detailCard = new UI.Card({title: phrases[3].title});
+        default:
+          
+      }
       // Show a card with clicked item details
-      var detailCard = new UI.Card({
+   /*   detailCard = new UI.Card({
         title: phrases[0].title
-      });
+      });*/
     
       // Show the new Card
       detailCard.show();

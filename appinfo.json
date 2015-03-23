@@ -1,7 +1,7 @@
 {
     "appKeys": {},
     "capabilities": [
-        ""
+        "location"
     ],
     "companyName": "shane.cmetzger@gmail.com",
     "longName": "Travel App (JS)",

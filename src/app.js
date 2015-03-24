@@ -1,5 +1,12 @@
 var UI = require('ui');
 var ajax = require('ajax');
+
+
+var measure = require('measure');        // require additional library                 // logs 42
+measure.functionA();                         // logs "This is working now"
+
+
+
 //var long, lat;
 
 function updateWeather(){
@@ -47,6 +54,8 @@ function updateWeather(){
   navigator.geolocation.getCurrentPosition(locationSuccess, locationError, locationOptions);
 
 }
+
+
 // Make a list of menu items
 var pebblets = [
   {
@@ -137,38 +146,13 @@ appMenu.on('select', function(event) {
           console.log("Default Case");
           detailCard = new UI.Card({title: phrases[3].title});
           break;
-      }
-      // Show a card with clicked item details
-   /*   detailCard = new UI.Card({
-        title: phrases[0].title
-      });*/
-    
+      }   
       // Show the new Card
       detailCard.show();
 });
 
-/*  //PHRASEBOOK
 
 
-// Create the Menu, supplying the list of fruits
-var phraseMenu = pebblets[3]({
-  sections: [{
-    title: 'Spanish Phrases',
-    items: phrases
-  }]
-});
-phraseMenu.show();
-
-phraseMenu.on('select', function(event) {
-  // Show a card with clicked item details
-  var phraseCard = new UI.Card({
-    title: phrases[event.itemIndex].title,
-    body: phrases[event.itemIndex].subtitle
-  });
-
-  // Show the new Card
-  phraseCard.show();
-});*/
 
 
 

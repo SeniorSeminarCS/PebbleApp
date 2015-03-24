@@ -1,15 +1,8 @@
 var UI = require('ui');
-var ajax = require('ajax');
-
-
-var measure = require('measure');        // require additional library                 // logs 42
-measure.functionA();                         // logs "This is working now"
-
-
-
+var weather = require('weather');
 //var long, lat;
 
-function updateWeather(){
+/*function updateWeather(){
   var lat, long;
 
   console.log("Inside Weather");
@@ -27,7 +20,7 @@ function updateWeather(){
     long = pos.coords.longitude;
     lat = pos.coords.latitude;
     var URL =  "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&type=accurate&mode=json";
-   console.log("GOT TO API REQUEST: "+URL);
+    console.log("GOT TO API REQUEST: "+URL);
     ajax({url: URL, type: 'json'},
     function(json) {
       console.log("NAME = "+json.name);
@@ -53,9 +46,7 @@ function updateWeather(){
   }
   navigator.geolocation.getCurrentPosition(locationSuccess, locationError, locationOptions);
 
-}
-
-
+}*/
 // Make a list of menu items
 var pebblets = [
   {
@@ -111,7 +102,7 @@ appMenu.on('select', function(event) {
       switch(event.itemIndex){
           
         case 0:
-          updateWeather();
+          weather.updateWeather();
           console.log("Case 0 - Weather");
           /*detailCard = new UI.Card({
             title: "Weather"
@@ -146,13 +137,38 @@ appMenu.on('select', function(event) {
           console.log("Default Case");
           detailCard = new UI.Card({title: phrases[3].title});
           break;
-      }   
+      }
+      // Show a card with clicked item details
+   /*   detailCard = new UI.Card({
+        title: phrases[0].title
+      });*/
+    
       // Show the new Card
       detailCard.show();
 });
 
+/*  //PHRASEBOOK
 
 
+// Create the Menu, supplying the list of fruits
+var phraseMenu = pebblets[3]({
+  sections: [{
+    title: 'Spanish Phrases',
+    items: phrases
+  }]
+});
+phraseMenu.show();
+
+phraseMenu.on('select', function(event) {
+  // Show a card with clicked item details
+  var phraseCard = new UI.Card({
+    title: phrases[event.itemIndex].title,
+    body: phrases[event.itemIndex].subtitle
+  });
+
+  // Show the new Card
+  phraseCard.show();
+});*/
 
 
 

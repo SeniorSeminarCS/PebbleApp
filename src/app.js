@@ -28,7 +28,7 @@ function updateWeather(){
       var tempF = tempC*9/5 +32;
     // Use data to show a weather forecast Card
     var resultsCard = new UI.Card({
-      title: json.name,
+      title: json.name+', '+json.sys.country,
       subtitle:  tempC +'°C / '+tempF + '°F',
       body: json.weather[0].main + '\nH: '+Math.round(json.main.temp_max-273.15)+'°C  L: '+Math.round(json.main.temp_min-273.15)+'°C'
     });

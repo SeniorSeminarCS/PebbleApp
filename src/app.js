@@ -1,5 +1,7 @@
 var UI = require('ui');
 var weather = require('weather');
+var currency = require('currency');
+var phrasebook = require('phrasebook');
 
 // Make a list of menu items
 var pebblets = [
@@ -64,6 +66,7 @@ appMenu.on('select', function(event) {
           break;
           
         case 1:
+          currency.currency();
            console.log("Case 1 - Curency");
            detailCard = new UI.Card({
             title: "Currency"
@@ -78,6 +81,7 @@ appMenu.on('select', function(event) {
           break;
           
         case 3:
+          phrasebook.phrasebook();
          console.log("Case 3 - Phrasebook");
           detailCard = new UI.Menu({
              sections: [{

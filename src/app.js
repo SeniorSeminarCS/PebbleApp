@@ -16,21 +16,21 @@ function updateWeather(){
     console.log('location error (' + err.code + '): ' + err.message);
   }
   function locationSuccess(pos) {
-    console.log('lat= ' + pos.coords.latitude + ' lon= ' + pos.coords.longitude);
+    //console.log('lat= ' + pos.coords.latitude + ' lon= ' + pos.coords.longitude);
     long = pos.coords.longitude;
     lat = pos.coords.latitude;
-    var URL =  "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long;
-    console.log("GOT TO API REQUEST: "+URL);
+    var URL =  "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&type=accurate&mode=json";
+   console.log("GOT TO API REQUEST: "+URL);
     ajax({url: URL, type: 'json'},
     function(json) {
       console.log("NAME = "+json.name);
-      console.log("Inside function");
-      var temp = Math.round(json.main.temp - 273.15);
-
+      var tempC = Math.round(json.main.temp - 273.15);
+      var tempF = tempC*9/5 +32;
     // Use data to show a weather forecast Card
     var resultsCard = new UI.Card({
       title: json.name,
-      body: json.weather[0].main + '\nTemp: ' + temp
+      subtitle:  tempC +'°C / '+tempF + '°F',
+      body: json.weather[0].main + '\nH: '+Math.round(json.main.temp_max-273.15)+'°C  L: '+Math.round(json.main.temp_min-273.15)+'°C'
     });
 
     // Show results, remove splash card
@@ -51,7 +51,7 @@ function updateWeather(){
 var pebblets = [
   {
     title: "Weather",
-    subtitle: "Current forecasts"
+    subtitle: "Current local weather"
   },
   {
     title: "Currency",
@@ -104,9 +104,9 @@ appMenu.on('select', function(event) {
         case 0:
           updateWeather();
           console.log("Case 0 - Weather");
-          detailCard = new UI.Card({
+          /*detailCard = new UI.Card({
             title: "Weather"
-          });
+          });*/
           break;
           
         case 1:

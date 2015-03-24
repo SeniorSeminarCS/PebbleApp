@@ -22,7 +22,28 @@ var currency = {
   });
   // Show the new Card
   detailCard.show(); 
-  }
     
+ var valueCard = new UI.Menu({
+   title: 'Enter a value',
+   body: '0',
+   scrollable: true
+ });
+  //valueCard.show();
+    
+  detailCard.on('select', function(event) {
+        valueCard.show();
+        switch(event.itemIndex){
+          case 0:
+              
+            break;
+          case 1:
+            
+            break;
+          default:
+            
+            break;
+        }
+  });
+  }
 };
 this.exports = currency;

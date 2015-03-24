@@ -1,6 +1,6 @@
 var measure = {
   "value" : " ",
-  measure : function(){
+  getMeasure : function(){
     
   }
     

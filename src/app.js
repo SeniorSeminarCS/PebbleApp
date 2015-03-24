@@ -2,6 +2,7 @@ var UI = require('ui');
 var weather = require('weather');
 var currency = require('currency');
 var phrasebook = require('phrasebook');
+var measure = require('measure');
 
 // Make a list of menu items
 var pebblets = [
@@ -33,67 +34,31 @@ var appMenu = new UI.Menu({
 
 // Show the Menu
 appMenu.show();
-var phrases = [
-  {
-    title: "Hello",
-    subtitle: "Hola"
-  },
-  {
-    title: "I need help",
-    subtitle: "Necesito ayuda"
-  },
-  {
-    title: "Do you speak English?",
-    subtitle: "¿Hablas ingles?"
-  },
-  {
-    title: "I'm not from here.",
-    subtitle: "No soy de aqui."
-  }
-];
+
 // Add a click listener for select button click
 appMenu.on('select', function(event) {
-      var detailCard;
       console.log(event.itemIndex);
       switch(event.itemIndex){
           
         case 0:
           weather.updateWeather();
-          console.log("Case 0 - Weather");
-          /*detailCard = new UI.Card({
-            title: "Weather"
-          });*/
           break;
           
         case 1:
-          currency.currency();
-           console.log("Case 1 - Curency");
-           detailCard = new UI.Card({
-            title: "Currency"
-          });
+          currency.getCurrency();
           break;
           
         case 2:
-           console.log("Case 2 - Measurement");
-            detailCard = new UI.Card({
-            title: "Measurement"
-            });
+          measure.getMeasure();
           break;
           
         case 3:
-          phrasebook.phrasebook();
-         console.log("Case 3 - Phrasebook");
-          detailCard = new UI.Menu({
-             sections: [{
-              title: 'Phrasebook',
-              items: phrases
-            }]
-          });
+          console.log("GOT HERE");
+          console.log(phrasebook);
+          phrasebook.getPhrasebook();
           break;
           
         default:
-          console.log("Default Case");
-          detailCard = new UI.Card({title: phrases[3].title});
           break;
       }
       // Show a card with clicked item details
@@ -101,8 +66,7 @@ appMenu.on('select', function(event) {
         title: phrases[0].title
       });*/
     
-      // Show the new Card
-      detailCard.show();
+    
 });
 
 /*  //PHRASEBOOK

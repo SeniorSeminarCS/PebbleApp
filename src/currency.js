@@ -4,6 +4,7 @@ var UI = require('ui');
 var currency = {
   "value" : " ",
   getCurrency : function(){
+    var selection;
     var currencies = [
   {
     title: "USD <--> EUR",
@@ -23,27 +24,28 @@ var currency = {
   // Show the new Card
   detailCard.show(); 
     
- var valueCard = new UI.Menu({
+ var valueCard = new UI.Card({
    title: 'Enter a value',
-   body: '0',
-   scrollable: true
+   body: '0'
+   //scrollable: true
  });
   //valueCard.show();
     
   detailCard.on('select', function(event) {
         valueCard.show();
-        switch(event.itemIndex){
-          case 0:
-              
-            break;
-          case 1:
-            
-            break;
-          default:
-            
-            break;
-        }
+        selection = event;
   });
+  valueCard.on('click','up', function(){
+      console.log("you pressed up");
+      console.log(valueCard.body.value);
+     // valueCard.body(valueCard.body +1);
+  });  
+    valueCard.on('down', function(event){
+      console.log("you pressed down");
+      valueCard.body(valueCard.body - 1);
+      if(valueCard.body < 0)
+          valueCard.body('0');
+  });  
   }
 };
 this.exports = currency;

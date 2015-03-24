@@ -66,17 +66,21 @@ var currency = {
             break;
         }
         var URL1 = "http://www.freecurrencyconverterapi.com/api/v3/convert?q="+curr1+"_"+curr2+"&compact=y";//&callback=myCallback";
-        //var URL2 = "http://www.freecurrencyconverterapi.com/api/v3/convert?q="+curr2+"_"+curr1+"&compact=y&callback=myCallback";
+        var conversion1;
+        var rate2;
+        var conversion2;
         ajax({url: URL1, type: 'json'},
         function (json) {
           console.log("NAME = "+json.name);
         // Use data to show a currency  Card
         var results = curr1+"_"+curr2;
-        var conversion = Math.round(json[results].val*finalValue * 100) / 100;
+        rate2 = 1/json[results].val;
+        conversion1 = Math.round(json[results].val*finalValue * 100) / 100;
+        conversion2 = Math.round(rate2*finalValue*100)/100;
         var resultsCard = new UI.Card({
           title: "",
           subtitle:  "",
-          body: finalValue+" "+curr1+" = "+(conversion)+" "+curr2
+          body: "\n"+finalValue+" "+curr1+" = "+(conversion1)+" "+curr2 +"\n\n"+ finalValue+" "+curr2+" = "+(conversion2)+" "+curr1
         });
       
       // Show results, remove splash card

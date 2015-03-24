@@ -38,59 +38,31 @@ appMenu.show();
 // Add a click listener for select button click
 appMenu.on('select', function(event) {
       console.log(event.itemIndex);
-      switch(event.itemIndex){
-          
+      switch(event.itemIndex){        
         case 0:
+          console.log("Case 0 - WEATHER");
           weather.updateWeather();
           break;
           
         case 1:
+          console.log("Case 1 - CURRENCY");
           currency.getCurrency();
           break;
           
         case 2:
+          console.log("Case 2 - MEASURE");
           measure.getMeasure();
           break;
           
         case 3:
-          console.log("GOT HERE");
-          console.log(phrasebook);
+          console.log("Case 3 - PHRASEBOOK");
           phrasebook.getPhrasebook();
           break;
           
         default:
           break;
       }
-      // Show a card with clicked item details
-   /*   detailCard = new UI.Card({
-        title: phrases[0].title
-      });*/
-    
     
 });
-
-/*  //PHRASEBOOK
-
-
-// Create the Menu, supplying the list of fruits
-var phraseMenu = pebblets[3]({
-  sections: [{
-    title: 'Spanish Phrases',
-    items: phrases
-  }]
-});
-phraseMenu.show();
-
-phraseMenu.on('select', function(event) {
-  // Show a card with clicked item details
-  var phraseCard = new UI.Card({
-    title: phrases[event.itemIndex].title,
-    body: phrases[event.itemIndex].subtitle
-  });
-
-  // Show the new Card
-  phraseCard.show();
-});*/
-
 
 

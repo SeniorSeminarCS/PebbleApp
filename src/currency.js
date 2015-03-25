@@ -16,6 +16,10 @@ var currency = {
   {
     title: "USD <--> GBP",
     subtitle: "US Dollar & Pound"
+  },
+       {
+    title: "EUR <--> GBP",
+    subtitle: "Euro & Pound"
   }
   ];
     var detailCard = new UI.Menu({
@@ -38,6 +42,7 @@ var currency = {
         valueCard.show();
         selection = event.itemIndex;
   });
+    
   valueCard.on('click','up', function(){
       var newVal = Math.round(valueCard.subtitle()) + 1;
       console.log("THe new value is "+newVal);
@@ -60,16 +65,20 @@ var currency = {
             curr1 = "USD";
             curr2 = "GBP";
             break;
+          case 2:
+            curr1 = "EUR";
+            curr2 = "GBP";
+            break;
           default:
             curr1 = "USD";
             curr2 = "USD";
             break;
         }
-        var URL1 = "http://www.freecurrencyconverterapi.com/api/v3/convert?q="+curr1+"_"+curr2+"&compact=y";//&callback=myCallback";
+        var URL = "http://www.freecurrencyconverterapi.com/api/v3/convert?q="+curr1+"_"+curr2+"&compact=y";
         var conversion1;
         var rate2;
         var conversion2;
-        ajax({url: URL1, type: 'json'},
+        ajax({url: URL, type: 'json'},
         function (json) {
           console.log("NAME = "+json.name);
         // Use data to show a currency  Card

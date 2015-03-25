@@ -1,4 +1,3 @@
-//    http://www.freecurrencyconverterapi.com/api/v3/convert?q="+document.getElementById("fromCur").value+"_"+document.getElementById("toCur").value+"&compact=y&callback=myCallback"
 var UI = require('ui');
 var ajax = require('ajax');
 var currency = {
@@ -42,7 +41,13 @@ var currency = {
         valueCard.show();
         selection = event.itemIndex;
   });
-    
+  
+  valueCard.on('longClick','up', function(){
+      var newVal = Math.round(valueCard.subtitle()) + 10;
+      console.log("THe new value is "+newVal);
+      valueCard.subtitle(""+newVal);
+  });  
+
   valueCard.on('click','up', function(){
       var newVal = Math.round(valueCard.subtitle()) + 1;
       console.log("THe new value is "+newVal);
@@ -50,6 +55,12 @@ var currency = {
   });  
     valueCard.on('click','down', function(){
       var newVal = Math.round(valueCard.subtitle()) -1;
+      if(newVal<0)
+          newVal = 0;
+      valueCard.subtitle(""+newVal);
+  }); 
+    valueCard.on('longClick','down', function(){
+      var newVal = Math.round(valueCard.subtitle()) -10;
       if(newVal<0)
           newVal = 0;
       valueCard.subtitle(""+newVal);
@@ -87,9 +98,9 @@ var currency = {
         conversion1 = Math.round(json[results].val*finalValue * 100) / 100;
         conversion2 = Math.round(rate2*finalValue*100)/100;
         var resultsCard = new UI.Card({
-          title: "",
-          subtitle:  "",
-          body: "\n"+finalValue+" "+curr1+" = "+(conversion1)+" "+curr2 +"\n\n"+ finalValue+" "+curr2+" = "+(conversion2)+" "+curr1
+          title:  "",
+          subtitle: "Conversion:\n"+finalValue+" "+curr1+" = "+(conversion1)+" "+curr2 +"\n"+ finalValue+" "+curr2+" = "+(conversion2)+" "+curr1,
+          scrollable: true
         });
       
       // Show results, remove splash card

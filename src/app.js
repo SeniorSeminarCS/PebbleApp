@@ -10,10 +10,10 @@ var window = new UI.Window();
 
 // Create a background Rect
 var bgRect = new UI.Rect({
-  position: new Vector2(10, 70),
-  size: new Vector2(124, 7),
-  backgroundColor: 'black',
-  borderColor: 'white'
+  position: new Vector2(5, 70),
+  size: new Vector2(134, 5),
+  backgroundColor: 'white',
+  borderColor: 'black'
 });
 
 // Add Rect to Window
@@ -21,25 +21,35 @@ window.add(bgRect);
 
 // Create TimeText
 var timeText = new UI.TimeText({
-  position: new Vector2(0, 25),
-  size: new Vector2(144, 30),
+  position: new Vector2(0, 10),
+  size: new Vector2(144, 40),
   text: "%H:%M",
   font: 'bitham-42-bold',
   color: 'white',
   textAlign: 'center'
 });
 
+var timeText2 = new UI.TimeText({
+  position: new Vector2(0, 50),
+  size: new Vector2(144, 8),
+  text: "%I:%M%p",
+  font: 'Gothic-18-bold',
+  color: 'white',
+  textAlign: 'right'
+});
+
 var dateText = new UI.TimeText({
   position: new Vector2(0,80),
   size: new Vector2(144,30),
-  text: "%a %d %b \n%Y",
-  font: 'Gothic-24-bold',
+  text: "%A\n%B %d",
+  font: 'Gothic-28-bold',
   color: 'white',
   textAlign: 'center'
 });
 
 // Add the TimeText
 window.add(timeText);
+window.add(timeText2);
 window.add(dateText);
 
 // Show the Window

@@ -35,7 +35,7 @@ var measure = {
     
   var valueCard = new UI.Card({
     title: "Enter a value",
-    subtitle: "0"
+    subtitle: "0",
   });
   var lengthMenu = new UI.Menu({
     sections: [{
@@ -55,7 +55,7 @@ var measure = {
       items: massTypes
     }]
   });
-     var volMenu = new UI.Menu({
+    var volMenu = new UI.Menu({
     sections: [{
       title: 'Volume Type',
       items: volTypes

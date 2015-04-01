@@ -6,7 +6,9 @@ var measure = require('measure');
 var Vector2 = require('vector2');
 
 // Create the Window
-var window = new UI.Window();
+var window = new UI.Window({
+  fullscreen: true
+});
 
 // Create a background Rect
 var bgRect = new UI.Rect({

@@ -29,6 +29,11 @@
                 "type": "font"
             },
             {
+                "file": "images/upArrow.png",
+                "name": "IMAGES_UPARROW_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/menu.png",
                 "menuIcon": true,
                 "name": "IMAGES_MENU_PNG",

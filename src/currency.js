@@ -91,7 +91,6 @@ var currency = {
         var conversion2;
         ajax({url: URL, type: 'json'},
         function (json) {
-          console.log("NAME = "+json.name);
         // Use data to show a currency  Card
         var results = curr1+"_"+curr2;
         rate2 = 1/json[results].val;

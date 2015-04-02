@@ -189,7 +189,10 @@ var measure = {
             switch(unitSelection){
               case 0://°F <--> °C
                 val1 = Math.round((input-32)*5/9*1000)/1000;
-                val2 = Math.round((input*9/5) +32*1000)/1000;
+                if(input>=0)
+                  val2 = Math.round((input*9/5) +32*1000)/1000;
+                else
+                  val2 = Math.round((160-Math.abs(input)*9)/5*1000)/1000;
                 ansCard.subtitle(input+"°F = "+val1+"°C\n"+input+"°C = "+val2+"°F");
                 break;
               case 1://°F <--> K

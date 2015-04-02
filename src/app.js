@@ -115,8 +115,6 @@ appMenu.on('select', function(event) {
           
         default:
           break;
-      }
-    
+      }    
 });
 });
-

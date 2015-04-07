@@ -34,6 +34,10 @@ var measure = {
   detailCard.show();
     
   var valueCard = new UI.Card({
+    action: {
+    up: 'images/action_icon_plus.png',
+    down: 'images/action_icon_minus.png'
+  },
     title: "Enter a value",
     subtitle: "0",
   });

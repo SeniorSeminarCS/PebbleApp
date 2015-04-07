@@ -25,13 +25,15 @@ var weather = {
     ajax({url: URL, type: 'json'},
     function(json) {
       console.log("NAME = "+json.name);
+      console.log("ICON = "+json.weather[0].icon);
       var tempC = Math.round(json.main.temp - 273.15);
       var tempF = tempC*9/5 +32;
     // Use data to show a weather forecast Card
     var resultsCard = new UI.Card({
       title: json.name+', '+json.sys.country,
-      subtitle:  tempC +'°C / '+tempF + '°F',
-      body: json.weather[0].main + '\nH: '+Math.round(json.main.temp_max-273.15)+'°C  L: '+Math.round(json.main.temp_min-273.15)+'°C'
+      subtitle:  tempC +'°C / '+tempF + '°F\n'+json.weather[0].main,
+      //body: json.weather[0].main,
+      banner: 'images/'+json.weather[0].icon+'.png'
     });
 
     // Show results, remove splash card

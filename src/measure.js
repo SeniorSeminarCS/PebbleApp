@@ -192,21 +192,18 @@ var measure = {
           case 3://Temp
             switch(unitSelection){
               case 0://°F <--> °C
-                val1 = Math.round((input-32)*5/9*1000)/1000;
-                if(input>=0)
-                  val2 = Math.round((input*9/5) +32*1000)/1000;
-                else
-                  val2 = Math.round((160-Math.abs(input)*9)/5*1000)/1000;
+                val1 = Math.round(((input-32)*5.0/9.0)*1000)/1000;
+                val2 = Math.round(((input*9.0/5.0)+32)*1000)/1000;
                 ansCard.subtitle(input+"°F = "+val1+"°C\n"+input+"°C = "+val2+"°F");
                 break;
               case 1://°F <--> K
-                val1 = Math.round((input-32)*5/9+273.15*1000)/1000;
-                val2 = Math.round((input*9/5) +32 -273.15*1000)/1000;
+                val1 = Math.round(((input+459.67)*5.0/9.0)*1000)/1000;
+                val2 = Math.round(((input*9.0/5.0) -459.67)*1000)/1000;
                 ansCard.subtitle(input+"°F = "+val1+"K\n"+input+"K = "+val2+"°F");
                 break;
               case 2://°C <--> K
-                val1 = Math.round(input+273.15*1000)/1000;
-                val2 = Math.round(input-273.15*1000)/1000;
+                val1 = Math.round((input+273.15)*1000)/1000;
+                val2 = Math.round((input-273.15)*1000)/1000;
                 ansCard.subtitle(input+"°C = "+val1+"K\n"+input+"K = "+val2+"°C");
                 break;
             }

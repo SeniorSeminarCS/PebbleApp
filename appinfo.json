@@ -133,11 +133,6 @@
                 "file": "images/01d.png",
                 "name": "IMAGES_01D_PNG",
                 "type": "png"
-            },
-            {
-                "file": "images/menu.png",
-                "name": "IMAGES_MENU_PNG",
-                "type": "png"
             }
         ]
     },

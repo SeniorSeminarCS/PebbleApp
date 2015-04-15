@@ -29,6 +29,11 @@
                 "type": "font"
             },
             {
+                "file": "images/bag30.png",
+                "name": "IMAGES_BAG30_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/action_icon_plus.png",
                 "name": "IMAGES_ACTION_ICON_PLUS_PNG",
                 "type": "png"

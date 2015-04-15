@@ -134,9 +134,9 @@
                 "type": "png"
             },
             {
-                "file": "images/menu.png",
+                "file": "images/bag30.png",
                 "menuIcon": true,
-                "name": "IMAGES_MENU_PNG",
+                "name": "IMAGES_BAG30_PNG",
                 "type": "png"
             }
         ]

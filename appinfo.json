@@ -30,6 +30,7 @@
             },
             {
                 "file": "images/bag30.png",
+                "menuIcon": true,
                 "name": "IMAGES_BAG30_PNG",
                 "type": "png"
             },
@@ -134,9 +135,8 @@
                 "type": "png"
             },
             {
-                "file": "images/bag30.png",
-                "menuIcon": true,
-                "name": "IMAGES_BAG30_PNG",
+                "file": "images/menu.png",
+                "name": "IMAGES_MENU_PNG",
                 "type": "png"
             }
         ]

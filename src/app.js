@@ -75,7 +75,7 @@ var pebblets = [
   },
   {
     title: "Phrasebook",
-    subtitle: "Spanish translations"
+    subtitle: "English Translations"
   }
 ];
 

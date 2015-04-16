@@ -129,11 +129,6 @@
                 "type": "png"
             },
             {
-                "file": "images/menu_icon_tic_tock_toe.png",
-                "name": "IMAGES_MENU_ICON_TIC_TOCK_TOE_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/final_suitcase.png",
                 "menuIcon": true,
                 "name": "IMAGES_FINAL_SUITCASE_PNG",

@@ -4,6 +4,7 @@ var currency = require('currency');
 var phrasebook = require('phrasebook');
 var measure = require('measure');
 var Vector2 = require('vector2');
+var ajax = require('ajax');
 
 // Create the Window
 var window = new UI.Window({

@@ -167,6 +167,7 @@ var measure = {
                 val1 = Math.round(input*0.453592*1000)/1000;
                 val2 = Math.round(input*(1/0.453592)*1000)/1000;
                 ansCard.subtitle(input+"lbs = "+val1+"kg\n"+input+"kg = "+val2+"lbs");
+                console.log(input+"lbs = "+val1+"kg\n"+input+"kg = "+val2+"lbs");
                 break;
               case 1://oz<--> g
                 val1 = Math.round(input*28.3495*1000)/100;

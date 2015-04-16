@@ -9,6 +9,11 @@
     "resources": {
         "media": [
             {
+                "file": "images/menu_icon.png",
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
                 "file": "images/logo_splash.png",
                 "name": "IMAGE_LOGO_SPLASH",
                 "type": "png"
@@ -24,109 +29,8 @@
                 "type": "font"
             },
             {
-                "file": "images/final_suitcase.png",
-                "menuIcon": true,
-                "name": "IMAGES_FINAL_SUITCASE_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/picture.png",
-                "name": "IMAGES_PICTURE_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/menu_icon_tic_tock_toe.png",
-                "name": "IMAGES_MENU_ICON_TIC_TOCK_TOE_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/01d.png",
-                "name": "IMAGES_01D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/01n.png",
-                "name": "IMAGES_01N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/02d.png",
-                "name": "IMAGES_02D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/02n.png",
-                "name": "IMAGES_02N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/03d.png",
-                "name": "IMAGES_03D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/03n.png",
-                "name": "IMAGES_03N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/04d.png",
-                "name": "IMAGES_04D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/04n.png",
-                "name": "IMAGES_04N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/09d.png",
-                "name": "IMAGES_09D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/09n.png",
-                "name": "IMAGES_09N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/10d.png",
-                "name": "IMAGES_10D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/10n.png",
-                "name": "IMAGES_10N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/11d.png",
-                "name": "IMAGES_11D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/11n.png",
-                "name": "IMAGES_11N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/13d.png",
-                "name": "IMAGES_13D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/13n.png",
-                "name": "IMAGES_13N_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/50d.png",
-                "name": "IMAGES_50D_PNG",
-                "type": "png"
-            },
-            {
-                "file": "images/50n.png",
-                "name": "IMAGES_50N_PNG",
+                "file": "images/action_icon_plus.png",
+                "name": "IMAGES_ACTION_ICON_PLUS_PNG",
                 "type": "png"
             },
             {
@@ -135,8 +39,104 @@
                 "type": "png"
             },
             {
-                "file": "images/action_icon_plus.png",
-                "name": "IMAGES_ACTION_ICON_PLUS_PNG",
+                "file": "images/50n.png",
+                "name": "IMAGES_50N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/50d.png",
+                "name": "IMAGES_50D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/13n.png",
+                "name": "IMAGES_13N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/13d.png",
+                "name": "IMAGES_13D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/11n.png",
+                "name": "IMAGES_11N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/11d.png",
+                "name": "IMAGES_11D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/10n.png",
+                "name": "IMAGES_10N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/10d.png",
+                "name": "IMAGES_10D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/09n.png",
+                "name": "IMAGES_09N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/09d.png",
+                "name": "IMAGES_09D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/04n.png",
+                "name": "IMAGES_04N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/04d.png",
+                "name": "IMAGES_04D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/03n.png",
+                "name": "IMAGES_03N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/03d.png",
+                "name": "IMAGES_03D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/02n.png",
+                "name": "IMAGES_02N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/02d.png",
+                "name": "IMAGES_02D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/01n.png",
+                "name": "IMAGES_01N_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/01d.png",
+                "name": "IMAGES_01D_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/menu_icon_tic_tock_toe.png",
+                "name": "IMAGES_MENU_ICON_TIC_TOCK_TOE_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/final_suitcase.png",
+                "menuIcon": true,
+                "name": "IMAGES_FINAL_SUITCASE_PNG",
                 "type": "png"
             }
         ]

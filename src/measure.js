@@ -66,7 +66,7 @@ var measure = {
     }]
   });
   
-  var ansCard = new UI.Card();
+    var ansCard = new UI.Card();
     
   detailCard.on('select', function(event) {
        valueCard.subtitle(""+0);

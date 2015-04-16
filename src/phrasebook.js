@@ -1,35 +1,6 @@
 var UI = require('ui');
 var phrasebook = {
   "value" : " ",
-  //langMenu = 
-  /*getPhrasebook : function(){
-    var phrases = [
-  {
-    title: "Hello",
-    subtitle: "Hola"
-  },
-  {
-    title: "I need help",
-    subtitle: "Necesito ayuda"
-  },
-  {
-    title: "Do you speak English?",
-    subtitle: "¿Hablas ingles?"
-  },
-  {
-    title: "I'm not from here.",
-    subtitle: "No soy de aqui."
-  }
-  ];
-  var detailCard = new UI.Menu({
-    sections: [{
-      title: 'Phrasebook',
-      items: phrases
-      }]
-  });
-  // Show the new Card
-  detailCard.show();  
-  }*/
    getPhrasebook : function(){
      
    var langOptions = [{
@@ -230,10 +201,10 @@ var phrasebook = {
          trans = '¿Merci, appelez la Ambassade Américain.';
          break;
        case 10:
-         trans = 'Devo la polizia.';
+         trans = 'J\'ai besoin de la police.';
          break;
        case 11:
-         trans = 'Dove posso trovare aeroporto?';
+         trans = 'Où est l\'aéroport?';
          break;
        default:
          trans = 'Error!';
